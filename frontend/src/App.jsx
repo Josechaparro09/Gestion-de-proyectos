@@ -1,18 +1,11 @@
-import { BrowserRouter as Router } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
-import { Routes } from './routes';
-import { GlobalNotifications } from './components/notifications/GlobalNotifications';
-import { Toaster } from 'react-hot-toast';
+import { Router } from './Router';
 
 function App() {
   return (
-    <Router>
-      <AuthProvider>
-        <Routes />
-        <GlobalNotifications />
-        <Toaster position="top-right" />
-      </AuthProvider>
-    </Router>
+    <AuthProvider>
+      <Router />
+    </AuthProvider>
   );
 }
 
